@@ -1,0 +1,19 @@
+library identifier: 'shared-library@main', retriever: modernSCM(
+  [$class: 'GitSCMSource',
+   remote: 'https://github.com/Ibrahimkhawaja/calculator_shared_library.git',
+   credentialsId: 'github-cred'])
+pipeline {
+    agent any
+    stages {
+        stage('Add') {
+            steps {
+                add()
+            }
+        }
+        stage('Subtract'){
+            steps {
+                subtract()
+            }
+        }
+    }
+}
