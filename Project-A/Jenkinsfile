@@ -10,10 +10,6 @@ pipeline {
                 add()
             }
         }
-        stage('Subtract'){
-            steps {
-                subtract()
-            }
-        }
+      
     }
 }
